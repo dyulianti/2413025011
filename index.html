@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dewi yulianti_2413025011</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        
+        background-size: cover;
+        border-image: fill 0 linear-gradient(#001, #5ecaf900);
+      }
+
+      nav {
+        width: 100%;
+        height: 10vh;
+        position: sticky;
+        top: 0;
+        background-color: rgb(255, 127, 8);
+      }
+
+      .nav-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+      }
+
+      .logo {
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      .logo span {
+        color: #eb8500;
+        text-shadow: 0 0 10px rgb(255, 255, 255);
+      }
+
+      .hamburg {
+        cursor: pointer;
+        color: white;
+        font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
+      }
+
+      .links {
+        display: flex;
+      }
+
+      .links a {
+        font-size: 1.2rem;
+        color: white;
+        margin: 0 20px;
+        text-decoration: none;
+        font-weight: 550;
+        transition: color 0.3s ease;
+      }
+
+      .links a:hover {
+        color: rgb(255, 255, 255);
+      }
+
+      section {
+        width: 100%;
+        height: 90vh;
+        overflow-y: auto;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 22px;
+        color: white;
+      }
+
+      nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        margin: 0 20px;
+      }
+
+      nav ul li {
+        margin: 0 15px;
+      }
+
+      nav ul li a {
+        color: #b2dfdb;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+
+      nav ul li a:hover {
+        color: #ffffff;
+      }
+
+      .main-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        padding-top: 100px;
+      }
+
+      .hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 3px solid #b2dfdb;
+  border-radius: 10px;
+  background-color: rgba(255, 153, 0, 0.1);
+  transition: border-color 0.3s, transform 0.3s;
+  color: white; 
+  margin-right: 40px; 
+}
+
+.hero h1 {
+  color: white;
+}
+
+      .hero:hover  {
+        border-color: #ffffff;
+        transform: scale(1.05);
+      }
+
+.main-container-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+  height: 90vh; /* tinggi hampir penuh layar */
+  padding: 0 20px;
+}
+
+      .main-container-hero .image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f69816; 
+  margin-bottom: 20px;
+}
+
+      .main-container-hero .content {
+       max-width: 600px;
+       padding: 0 20px;
+    }
+ 
+    .deskripsi-wrapper {
+  display: inline-block;
+  padding: 20px;
+  border: 2px solid #eb8500;
+  border-radius: 12px;
+  background-color: #eb8500;
+}
+
+#deskripsi-diri {
+  margin: 0;
+  font-size: 16px;
+  transition: transform 0.1s ease;
+}
+
+      @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .profile-pic {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 15px;
+        border: 3px solid #ffc98f;
+      }
+
+      @keyframes animate {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      .main-container .content {
+        color: white;
+        width: 60%;
+        min-height: 300px;
+        text-align: left;
+      }
+      .about-content {
+       text-align: left;
+      }
+      .content h1 {
+        font-size: clamp(1rem, 1rem + 5vw, 1.8rem);
+      }
+
+      .content h1 span {
+        color: rgb(162, 92, 0);
+        text-shadow: 0 0 10px rgb(255, 255, 255);
+      }
+
+      .content .typewriter {
+        font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
+        font-weight: 600;
+      }
+
+      .content .typewriter-text {
+        color:rgb(255, 144, 9);
+        text-shadow: 0 0 10px rgb(0, 0, 0);
+      }
+
+      .content p {
+        font-size: clamp(0.4rem, 0.2rem + 9vw, 1rem);
+        margin: 10px 0;
+      }
+
+ .social-links {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+      .social-links a {
+        margin-right: 15px;
+      }
+
+      .social-links i {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 3rem;
+        height: 3rem;
+        background-color: transparent;
+        border: 0.2rem solid rgb(254, 145, 29);
+        border-radius: 50%;
+        color: rgb(255, 255, 255);
+        font-size: 1.5rem;
+        transition: transform 0.2s linear;
+      }
+
+      .social-links i:hover {
+        transform: scale(1.3);
+        color:#eb8500;
+        background-color: rgb(255, 229, 34);
+        filter: drop-shadow(0 0 10px rgb(255, 255, 255));
+      }
+
+      .animated-button {
+        width: 50%;
+        height: 6vh;
+        margin-top: 20px;
+        background-color: rgb(245, 192, 107);
+        color: white;
+        border: none;
+        outline: none;
+        font-size: 120%;
+        font-weight: 700;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease,
+        background-color 0.3s ease;
+        animation: pulse 1.5s infinite;
+      }
+
+      .animated-button:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(255, 222, 102, 0.9);
+        background-color: rgb(194, 255, 248);
+      }
+
+      .social-links img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgb(255, 255, 255);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.social-links a {
+  display: inline-block;
+  margin: 0 10px;
+}
+      .content {
+        color: white;
+        width: 60%;
+        min-height: 300px;
+        text-align: center;
+      }
+
+      .social-links img:hover {
+       transform: scale(1.2);
+       box-shadow: 0 0 10px rgb(255, 197, 7);
+      }
+
+      .tugas-container {
+       display: grid;
+       grid-template-columns: repeat(2, 1fr); /* 2 kolom */
+       gap: 20px;
+       max-width: 600px; /* Total lebar container */
+       margin: 0 auto; /* Biar container tetap di tengah */
+       }
+
+      .button:hover {
+        background-color: #ff8103;
+        transform: scale(1.1);
+      }
+
+      .tugas {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  width: 100%; /* biar ikut lebar kolom grid */
+  text-align: center;
+  transition: background 0.3s, transform 0.3s;
+}
+
+/* Untuk judul "Beberapa Tugas Saya" */
+h2 {
+  color: white;
+}
+
+/* Untuk teks di dalam kotak tugas */
+.tugas {
+  color: white;
+}
+
+/* Jika ada heading atau paragraf di dalam tugas */
+.tugas h3, .tugas p {
+  color: white;
+}
+
+      .tugas:hover {
+        background: rgba(255, 141, 2, 0.492);
+        transform: scale(1.05);
+      }
+
+      .tugas img {
+        width: 250px;
+        height: 150px;
+        border-radius: 5px;
+        border: 2px solid white;
+      }
+
+      .tugas .button {
+        display: block;
+        margin-top: 10px;
+      }
+
+      .button:hover {
+        background-color: #eb8500;
+        transform: scale(1.1);
+      }
+
+      .button {
+        background-color:#eb8500;
+        color: rgb(245, 245, 245);
+        border: #ffab3e;
+        padding: 12px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 20px;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 10px;
+        transition: transform 0.3s;
+      }
+
+      @media (max-width: 768px) {
+  .links {
+    display: none;
+    flex-direction: column;
+    background-color: #ff5500;
+    position: absolute;
+    top: 10vh;
+    right: 0;
+    width: 100%;
+  }
+
+  .links.active {
+    display: flex;
+  }
+}
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      footer {
+        padding: 20px;
+        background: #d66f00;
+        margin-top: 40px;
+        text-align: center;
+      }
+
+  #home-section, #about-section, #report-section {
+    display: none;
+  }
+
+  #home-section {
+    display: block;
+  }
+
+  .content {
+    color: white;
+    width: 60%;
+    min-height: 300px;
+    text-align: left;
+  }
+
+  .main-container img, .hero img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 15px;
+        border: 3px solid #b2dfdb;
+  }
+
+  #typewriter-pti {
+  border-right: 2px solid white;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: blink-cursor 0.8s infinite;
+}
+
+@keyframes blink-cursor {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: white; }
+}
+
+@media (max-width: 768px) {
+  .main-container-hero {
+    flex-direction: column;
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  .hero {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .main-container-hero .image img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .content {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .content h1 {
+    font-size: 1.2rem;
+  }
+
+  .typewriter-text {
+    font-size: 1rem;
+    display: block;
+    word-break: break-word;
+  }
+
+  .animated-button {
+    width: 90%;
+    font-size: 1rem;
+  }
+}
+
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 1;
+}
+
+main, header, section {
+  position: relative;
+  z-index: 1;
+}
+
+  /* Hapus salah satu duplikat .button dan gabungkan saja */
+</style>     
+    </style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  </head>
+  <body>
+          
+    <video autoplay muted loop id="bg-video">
+      <source src="tartaglia bg.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Dewi Yulianti</div>
+            <div class="links">
+              <div class="link"><a href="#" onclick="showHome()">Home</a></div>
+              <div class="link"><a href="#" onclick="showAbout()">About me</a></div>
+              <div class="link"><a href="#" onclick="showTasks()">Tasks</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg"></i>
+          </div>
+    </nav>
+
+    <section id="home-section">
+      <div data-aos="zoom-in-down" data-aos-delay="500" class="main-container-hero">
+        <div class="hero" class="typewriter" >
+            <h1>Hello Everyone</h1>
+            <img src="foto lia.jpg" alt="Foto profil Dewi Yulianti"  class="profile-pic" />
+        </div>
+        <div data-aos="zoom-in-down" data-aos-delay="500" class="content">
+          <h1>Salam kenal</h1>
+          <div class="typewriter">
+            <h1>Saya Dewi Yulianti, Mahasiswi Dari Program studi </h1>
+            <span id="typewriter-pti" class="typewriter-text highlight"></span>
+            ><label></label>
+          </div>
+
+          <div data-aos="zoom-in-down" data-aos-delay="500" class="deskripsi-wrapper">
+            <p id="deskripsi-diri">
+            Nama saya Dewi Yulianti, seorang mahasiswi dari Universitas Lampung
+            Fakultas Keguruan dan Ilmu Pendidikan dengan nomor pokok mahasiswa
+            2413025011 yang sedang menempuh studi di bidang Pendidikan Teknologi
+            Informasi. Di website ini saya memposting beberapa tugas dari mata
+            kuliah saya yaitu Grafika Komputer.
+          </p>
+          </div>
+
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/dewi-yulianti-ba69b9327/" target="_blank">
+              <img src="Linkedin.jpeg" alt="LinkedIn" />
+            </a>
+            <a href="mailto:dy457654@gmail.com">
+              <img src="email.jpeg" alt="Email" />
+            </a>
+            <a href="https://wa.me/qr/OTQNFAPTI4Z4D1" target="_blank">
+              <img src="WA.jpeg" alt="WhatsApp" />
+            </a>
+          </div>
+    </section>
+
+    <section id="about-section">
+      <div data-aos="zoom-in-down" data-aos-delay="500" class="main-container-hero">
+        <div class="hero">
+        <div class="main-container">
+            <div class="image">
+            <img src="foto lia.jpg" alt="Foto profil Dewi Yulianti" />
+        </div>
+        <div class="content">
+          <h1>Tentang Saya</h1>
+          <p><strong>Nama:</strong> Dewi Yulianti</p>
+          <p>
+            <strong>Tempat/Tanggal Lahir:</strong> Sumber Tengah, 25 juli 2006
+          </p>
+          <p><strong>Jenis Kelamin:</strong> Perempuan</p>
+          <p><strong>Domisili Asal:</strong> Tanggamus</p>
+          <p><strong>Agama:</strong> Islam</p>
+          <br />
+          <p><strong>Instansi:</strong> Universitas Lampung</p>
+          <p><strong>Fakultas:</strong> KIP</p>
+          <p><strong>Jurusan:</strong> PMIPA</p>
+          <p><strong>Program Studi:</strong> Pendidikan Teknologi Informasi</p>
+          <p><strong>Angkatan:</strong> 2024</p>
+          <p><strong>NPM:</strong> 2413025011</p>
+          <p><strong>Kelas:</strong> A </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="report-section" style="display: none; text-align: center">
+        <h2>Beberapa Tugas Saya</h2>
+        <div class="tugas-container">
+
+<div class="tugas-container">
+  <div class="tugas">
+    <img src="perintis.jpeg" alt="Tokoh Perintis Grafika" />
+    <p>Tugas 1: Tokoh Perintis Grafika Komputer</p>
+    <a
+      href="https://drive.google.com/drive/folders/1mykTzTqnCCVydjHUtQ9d58f-8ekmK1g1?usp=drive_link"
+      target="_blank"
+      class="button">Lihat Tugas</a>
+  </div>
+
+  <div class="tugas">
+    <img src="algoritma.jpeg" alt="Algoritma DDA dan Bresenham" />
+    <p>Tugas 2: Algoritma DDA dan Bresenham</p>
+    <a
+      href="https://drive.google.com/drive/folders/1966hrmbWhckSEmoDkRdQO1GoSf2WLwXD?usp=drive_link"
+      target="_blank"
+      class="button">Lihat Tugas</a>
+  </div>
+
+  <div class="tugas">
+    <img src="ALGORITMA Brasenham dan Mid Poin.png" alt="Lingkaran Brasenham dan MidPoin" />
+    <p>Tugas 3: Lingkaran Brasenham dan MidPoin</p>
+    <a
+      href="https://drive.google.com/drive/folders/1NbEKLCzIfJaYEPRKOGZmMLa77mWbpQEE?usp=drive_link"
+      target="_blank"
+      class="button">Lihat Tugas</a>
+  </div>
+
+  <div class="tugas">
+    <img src="KURVA.png" alt="KURVA BERZIER CUBIK" />
+    <p>Tugas 4: KURVA BERZIER CUBIK</p>
+    <a
+      href="https://drive.google.com/drive/folders/13UvNbXWTzGalKXa4VzxsWy2-3Ch_vg4G?usp=drive_link"
+      target="_blank"
+      class="button">Lihat Tugas</a>
+  </div>
+</div>
+
+
+      <script>
+        function showHome() {
+          hideAllSections();
+          document.getElementById("home-section").style.display = "block";
+        }
+      
+        function showAbout() {
+          hideAllSections();
+          document.getElementById("about-section").style.display = "block";
+        }
+      
+        function showTasks() {
+          hideAllSections();
+          document.getElementById("report-section").style.display = "block";
+        }
+      
+        function hideAllSections() {
+          document.getElementById("home-section").style.display = "none";
+          document.getElementById("about-section").style.display = "none";
+          document.getElementById("report-section").style.display = "none";
+        }
+      
+        // Toggle menu untuk mobile
+        document.querySelector(".hamburg").addEventListener("click", () => {
+          document.querySelector(".links").classList.toggle("active");
+        });
+      </script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
+      <script>
+        const textPTI = "Pendidikan Teknologi Informasi";
+        let iPTI = 0;
+      
+        function ketikPTI() {
+          if (iPTI < textPTI.length) {
+            document.getElementById("typewriter-pti").innerHTML += textPTI.charAt(iPTI);
+            iPTI++;
+            setTimeout(ketikPTI, 100); // kecepatan ketik (ms)
+          }
+        }
+      
+        window.onload = ketikPTI;
+      </script>
+  </body>
+</html>
