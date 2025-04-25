@@ -368,6 +368,16 @@ h2 {
 .tugas h3, .tugas p {
   color: white;
 }
+      .tugas.excel {
+  grid-column: 1 / -1;        /* Supaya isi satu baris penuh */
+  justify-self: center;       /* Posisinya di tengah */
+  width: 60%;                 /* Bisa disesuaikan biar gak terlalu lebar */
+}
+      @media (max-width: 600px) {
+  .tugas.excel {
+    width: 90%; /* Responsif di layar kecil */
+  }
+}
 
       .tugas:hover {
         background: rgba(255, 141, 2, 0.492);
@@ -654,12 +664,21 @@ main, header, section {
 
   <div class="tugas">
     <img src="KURVA.png" alt="KURVA BERZIER CUBIK" />
-    <p>Tugas 4: KURVA BERZIER CUBIK</p>
+    <p>Tugas 4: Kurva berzier cubik membuat gambar pohon</p>
     <a
       href="https://drive.google.com/drive/folders/13UvNbXWTzGalKXa4VzxsWy2-3Ch_vg4G?usp=drive_link"
       target="_blank"
       class="button">Lihat Tugas</a>
   </div>
+</div>
+
+<div class="tugas excel">
+  <img src="excel.png" alt="dokumen spreadsheet 1-3" />
+  <p>Tugas Spreadsheet: axcel</p>
+  <a
+    href="https://drive.google.com/drive/folders/17-L7QrldwItTjcFAYzqAUozesM0GOFqH?usp=sharing"
+    target="_blank"
+    class="button">Lihat Tugas</a>
 </div>
 
 
